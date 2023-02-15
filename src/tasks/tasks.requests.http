@@ -1,0 +1,30 @@
+### Retrieve all clients
+GET http://localhost:3000/tasks
+
+### Retrieve a client by ID
+GET http://localhost:3000/tasks/1
+
+
+### Delete client
+DELETE http://localhost:3000/tasks/1
+
+
+### Create task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+
+{
+      "category": "todo",
+      "title": "CSS",
+      "content": "Finir CSS projet Trello"
+}
+
+### Update client
+PUT http://localhost:3000/tasks/1
+Content-Type: application/json
+
+{
+      "category": "done",
+      "title": "CSS",
+      "content": "Finir CSS projet Trello"
+}
