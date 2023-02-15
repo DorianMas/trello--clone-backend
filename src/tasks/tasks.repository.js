@@ -11,28 +11,28 @@ async function findOne(id) {
 }
 
 async function create(TaskData) {
-  const { category, title, content } = TaskData
+  const { state, title, content } = TaskData
   const { rows } = await Pool.query(
-    `INSERT INTO tasks(category,title,content) 
+    `INSERT INTO tasks(state,title,content) 
       VALUES($1,$2,$3) RETURNING *`,
-    [category, title, content],
+    [state, title, content],
   )
 
   return rows[0]
 }
 
 async function update(id, updateTaskData) {
-  const { category, title, content } = updateTaskData
+  const { state, title, content } = updateTaskData
 
   const { rows } = await Pool.query(
     `
         UPDATE tasks
         SET 
-        category=$1, title=$2, content=$3
+        state=$1, title=$2, content=$3
         WHERE id=$4
-        RETURNING id,category, title, content
+        RETURNING id,state, title, content
       `,
-    [category, title, content, id],
+    [state, title, content, id],
   )
   return rows[0]
 }
@@ -42,7 +42,7 @@ async function remove(id) {
     `
       DELETE FROM tasks
       WHERE id=$1
-      RETURNING category, title, content
+      RETURNING state, title, content
     `,
     [id],
   )

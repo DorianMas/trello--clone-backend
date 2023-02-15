@@ -1,5 +1,5 @@
 const TaskSchema = Object.freeze({
-  category: 'string',
+  state: 'string',
   title: 'string',
   content: 'string',
 })
