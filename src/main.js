@@ -1,5 +1,5 @@
 const express = require('express')
-const {tasksRouter} = require('./tasks/tasks.routes')
+const { tasksRouter } = require('./tasks/tasks.routes')
 const { Pool } = require('./pool')
 const cors = require('cors')
 
