@@ -15,16 +15,16 @@ Content-Type: application/json
 
 {
       "category": "todo",
-      "title": "CSS",
-      "content": "Finir CSS projet Trello"
+      "title": "Todo 3 ",
+      "content": "Test"
 }
 
 ### Update client
-PUT http://localhost:3000/tasks/1
+PUT http://localhost:3000/tasks/2
 Content-Type: application/json
 
 {
-      "category": "done",
-      "title": "CSS",
-      "content": "Finir CSS projet Trello"
+      "category": "blocked",
+      "title": "Todo 2",
+      "content": " jojo"
 }
