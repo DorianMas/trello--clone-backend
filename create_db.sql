@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS tasks(
     ('todo', 'inprogress', 'done', 'blocked') ),
     id integer NOT NULL,
     title character varying(100) NOT NULL,
-    content text ,
+    content text,
     index integer,
     CONSTRAINT tasks_pkey PRIMARY KEY (id)
 );
