@@ -9,10 +9,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.get('*', (req, res) => {
-  res.status(404).send('Pas de route sur cette URL :D')
-})
-
 app.use('/tasks', tasksRouter)
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
@@ -21,6 +17,10 @@ app.use((err, req, res, next) => {
 
 app.get('/', (req, res) => {
   res.send("Salut, c'est le serveur de Trello - groupe 3 - M2I")
+})
+
+app.get('*', (req, res) => {
+  res.status(404).send('Pas de route sur cette URL :D')
 })
 
 const PORT = process.env.PORT || 3000
