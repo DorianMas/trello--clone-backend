@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
   res.send('Salut')
 })
 
-const PORT = '0.0.0.0: $PORT'
+const PORT = process.env.PORT || 3000
 
 const connectionString = `postgresql://postgres:4rNFy20XHtVNENHc6xa9@containers-us-west-177.railway.app:6412/railway`
 
