@@ -2,11 +2,11 @@
 GET http://localhost:3000/tasks
 
 ### Retrieve a task by ID
-GET http://localhost:3000/tasks/1
+GET http://localhost:3000/tasks/3
 
 
 ### Delete task
-DELETE http://localhost:3000/tasks/1
+DELETE http://localhost:3000/tasks/5
 
 
 ### Create task
@@ -14,9 +14,10 @@ POST http://localhost:3000/tasks
 Content-Type: application/json
 
 {
-      "state": "todo",
-      "title": "Todo 3 ",
-      "content": "Test"
+      "state": "done",
+      "title": "test5",
+      "content": "Test",
+      "index":1
 }
 
 ### Update task

@@ -19,14 +19,11 @@ app.get('/', (req, res) => {
 })
 
 const PORT = 3000
+const connectionString = `postgresql://postgres:4rNFy20XHtVNENHc6xa9@containers-us-west-177.railway.app:6412/railway`
 
 function start() {
   Pool.connect({
-    host: process.env.DB_HOSTNAME,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    connectionString,
   })
     .then(() => {
       console.log('Connexion à Postgres établie avec succès.')
