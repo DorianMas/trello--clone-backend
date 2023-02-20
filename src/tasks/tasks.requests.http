@@ -17,7 +17,6 @@ Content-Type: application/json
       "state": "done",
       "title": "test5",
       "content": "Test",
-      "index":1
 }
 
 ### Update task
